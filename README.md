@@ -4,6 +4,30 @@ Aplicación móvil de punto de venta y administración creada para **el restaura
 
 La app trabaja con una base de datos local para permitir que las operaciones sigan guardándose cuando la conexión se interrumpe. Cuando vuelve internet, sincroniza los cambios pendientes con el backend del restaurante en Cloudflare Workers y D1.
 
+## Portafolio
+
+Estas capturas son **imágenes de ejemplo** de la interfaz móvil. Los nombres, pedidos, montos y estados que aparecen se incluyen únicamente para ilustrar el funcionamiento; no son un reporte oficial de ventas.
+
+| Inicio | Pedidos locales |
+|---|---|
+| <img src="screenshots/inicio.png" alt="Inicio de la app" width="240"> | <img src="screenshots/pedidos-local.png" alt="Pedidos locales" width="240"> |
+
+| Pedidos de WhatsApp | Ventas |
+|---|---|
+| <img src="screenshots/pedidos-whatsapp.png" alt="Pedidos recibidos por WhatsApp" width="240"> | <img src="screenshots/ventas.png" alt="Resumen e historial de ventas" width="240"> |
+
+| Caja y turnos | Administración |
+|---|---|
+| <img src="screenshots/caja.png" alt="Caja y turnos" width="240"> | <img src="screenshots/administracion.png" alt="Opciones de administración" width="240"> |
+
+## Chatbot de WhatsApp
+
+El sistema también incluye un **chatbot para WhatsApp Business**, conectado a la misma operación del restaurante. El cliente recorre un flujo guiado sin inteligencia artificial: consulta el menú, elige productos, indica cantidades, agrega productos de la categoría de adiciones o escribe instrucciones especiales, como “sin cebolla”.
+
+El bot también recoge los datos del cliente, permite escoger domicilio o recoger en el local, registra la forma de pago y envía el pedido al panel para su preparación. El flujo contempla cancelar o modificar pedidos pendientes y solicitar atención de un encargado. Cuando la entrega se registra, el pedido y sus ingresos quedan reflejados en la operación y en el historial de ventas.
+
+La integración usa WhatsApp Cloud API y un backend en Cloudflare Workers con D1. La app móvil consulta y sincroniza pedidos y ventas con ese mismo backend; las operaciones también quedan guardadas localmente mientras no hay conexión.
+
 ## Funciones
 
 - **Inicio:** resumen de ingresos del día, pedidos por estado, conexión y pedidos recientes.
